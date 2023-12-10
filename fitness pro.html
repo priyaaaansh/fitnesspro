@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Pro</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2em;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #34495e;
+            padding: 1em;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        section {
+            margin-bottom: 3em;
+        }
+
+        section h2 {
+            color: #2c3e50;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section li {
+            margin-bottom: 0.5em;
+        }
+
+        #download a {
+            display: inline-block;
+            margin: 1em 0;
+            padding: 1em 2em;
+            background-color: #3498db;
+            color: #ecf0f1;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #download a:hover {
+            background-color: #2980b9;
+        }
+
+        #contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #contact form {
+            flex: 1;
+            margin-right: 2em;
+        }
+
+        #contact form input,
+        #contact form textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact form button {
+            background-color: #2ecc71;
+            color: #ecf0f1;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contact form button:hover {
+            background-color: #27ae60;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fitness Pro</h1>
+        <p>Your Ultimate Fitness Companion</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Fitness Pro</h2>
+            <p>Your personal fitness companion to achieve your health and wellness goals. Get ready to transform your lifestyle!</p>
+        </section>
+
+        <section id="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Personalized workout plans tailored to your fitness level and goals.</li>
+                <li>Nutrition tracking with a vast database of foods and recipes.</li>
+                <li>Real-time progress monitoring and performance analytics.</li>
+                <li>Community support and challenges to keep you motivated.</li>
+                <li>Integration with wearables for seamless activity tracking.</li>
+            </ul>
+        </section>
+
+        <section id="download">
+            <h2>Download the App</h2>
+            <p>Start your fitness journey today! Download the Fitness Pro App for iOS and Android.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">Download for iOS</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Download for Android</a>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? Reach out to our support team.</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Fitness Pro. All rights reserved.</p>
+    </footer>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Your CSS styles here */
+    </style>
+    <title>Personalized Fitness Planner</title>
+</head>
+<body>
+    <header>
+        <h1>Personalized Fitness Planner</h1>
+    </header>
+    
+    <main>
+        <section id="personal-info">
+            <h2>Personal Information</h2>
+            <form id="personal-info-form">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" required>
+
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" min="1" required>
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" min="1" required>
+
+                <button type="button" onclick="generatePlan()">Generate Plan</button>
+            </form>
+        </section>
+
+        <section id="workout-plan">
+            <h2>Workout Plan</h2>
+            <div id="workout-result"></div>
+        </section>
+
+        <section id="diet-plan">
+            <h2>Diet Plan</h2>
+            <div id="diet-result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Personalized Fitness Planner</p>
+    </footer>
+    
+    <script>
+        async function generatePlan() {
+            // Get personal information from the form
+            const age = document.getElementById('age').value;
+            const height = document.getElementById('height').value;
+            const weight = document.getElementById('weight').value;
+
+            // Placeholder logic - Replace with actual fitness and nutrition algorithms
+            const workoutPlan = generateWorkoutPlan(age, height, weight);
+            const dietPlan = generateDietPlan(age, height, weight);
+
+            // Display the generated plans
+            document.getElementById('workout-result').innerHTML = workoutPlan;
+            document.getElementById('diet-result').innerHTML = dietPlan;
+        }
+
+        function generateWorkoutPlan(age, height, weight) {
+            // Placeholder logic - Replace with actual workout plan generation
+            return `<p>Workout Plan for ${age}-year-old, ${height}cm tall, ${weight}kg:</p>
+                    <ul>
+                        <li>Cardio exercises: 30 minutes, 3 times a week</li>
+                        <li>Strength training: 4 sets of 10 reps for major muscle groups</li>
+                        <!-- Add more exercises based on the algorithm -->
+                    </ul>`;
+        }
+
+        function generateDietPlan(age, height, weight) {
+            // Placeholder logic - Replace with actual diet plan generation
+            return `<p>Diet Plan for ${age}-year-old, ${height}cm tall, ${weight}kg:</p>
+                    <ul>
+                        <li>Caloric intake: 2000 kcal/day</li>
+                        <li>Protein: 1g per kg of body weight</li>
+                        <li>Carbohydrates: 45-65% of total daily calories</li>
+                        <li>Fats: 20-35% of total daily calories</li>
+                        <!-- Add more nutritional recommendations based on the algorithm -->
+                    </ul>`;
+        }
+    </script>
+</body>
+</html>
+</html>
